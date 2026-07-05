@@ -53,74 +53,13 @@ def play_from_search(query):
             print(f"Could not play song: {e}")
 
 playlist = {
-    'favsongs' : [
-        "Zaalima Raees",           # The one that crashed before (Validation test)
-        "Kesariya Brahmastra",      # High bitrate audio test
-        "Tum Hi Ho Aashiqui 2",     # Classic soulful track
-        "Apna Bana Le Bhediya",     # Trending melody
-        "Agar Tum Saath Ho",        # Emotional range test
-        "Chaiyya Chaiyya",          # Classic 90s beat
-        "Raataan Lambiyan Shershaah",# Modern romantic hit 
-        'laal pari housefull 5',
-        'party all night',
-        'yaad piya ki aane lagi',
-        'chaar botal vodka',
-        'make some noise for the desi boyz',
-        'galat baat hai',
-        'apna bana le',
-        'desi kalakaar honey singh',
-        'teri ankhon mein',
-        'sau tarah ke'
-    ],
-    'sadsongs':['uska hi banana','Bekhudi',''],
-    'bestsongs':[
-        'laal pari housefull 5',
-        'party all night',
-        'yaad piya ki aane lagi',
-        'chaar botal vodka',
-        'make some noise for desi boyz',
-        'galat baat hai',
-        'zaalima',
-        'apna bana le',
-        'mast magan',
-        'agar tum saath ho Tamasha',
-        'tera zikr',
-        'Teri ankhon mein',
-        'channa ve',
-        'Dariya',
-        'hookah bar',
-        'sau tarah ke', 
-        'sooraj dooba hai',
-        'kukkad',
-        'tum hi ho bandhu',
-        'yaar na mile',
-        'abhi toh party shuru hui hai',
-        'besharmi ki height',
-        'afgaan jalebi',
-        'daaru desi',
-        'chittiyaan kalaiyan',
-        'oh girl you are mine',
-        'shanivaar raati',
-
-                 ],
-    'one': [
-        'jai bajrangi part 1',
-        'jai bajrangi part 2',
-        'jai bajrangi part 3',
-        # 'geeta rap in 10 min',
-        # 'paramavatar',
-        # 'duvidha',
-        # 'krishna ki chetavni',
-        # 'bholenath a love story',
-        # 'bholenath 2 the desttroyer',
-        # 'bholenath 3',
-
-    ]
+    #Here the playlist dictionary will come
+    #Format playlist_name: list of song names
 }
 
 if __name__ == "__main__":
         play = input('Enter your playlist name or exit to exit: ')
-        shuffle = input('Do you want it to shuffle: ')
+        shuffle = input('Do you want it to shuffle: ') #Ans should be yes or no
         
         try:
             for key, value in playlist.items():
