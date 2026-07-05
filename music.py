@@ -20,14 +20,14 @@ def play_from_search(query):
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
-            print(f"🔍 Searching for: {query}...")
+            print(f"Searching for: {query}...")
             info = ydl.extract_info(search_query, download=False)['entries'][0]
             audio_url = info['url']
             title = info.get('title', 'Unknown Track')
             duration = info.get('duration', 0)
 
-            print(f"🎵 Playing: {title}")
-            print(f"⏱️ Duration: {duration // 60}:{duration % 60:02d}")
+            print(f"Playing: {title}")
+            print(f"Duration: {duration // 60}:{duration % 60:02d}")
 
             # VLC Streaming
             instance = vlc.Instance()
@@ -63,7 +63,9 @@ if __name__ == "__main__":
         
         try:
             for key, value in playlist.items():
-                if play.lower() == key:
+                if play.lower() == 'exit':
+                    break
+                elif play.lower() == key:
                     if shuffle.lower() == 'yes':
                         random.shuffle(value)
                     for i in value:
